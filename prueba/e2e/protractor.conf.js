@@ -33,5 +33,6 @@ exports.config = {
         displayStacktrace: StacktraceOption.PRETTY
       }
     }));
+    browser.waitForAngularEnabled(false);
   }
 };
