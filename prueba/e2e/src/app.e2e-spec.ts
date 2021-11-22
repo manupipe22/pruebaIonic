@@ -12,20 +12,23 @@ describe('new App', () => {
     expect(page.getParagraphText()).toContain('Start with Ionic UI Components');
   });
 
-  it('error on input email', () => {
+  it('input email', () => {
     page.navigateTo();
-    page.enterInputText('app-root #email-input','asdf');
-    expect(page.getTextLabel('app-root #email-input-er1')).toBeDefined();
+    page.enterInputText('#emailinput','asdf');
+    //expect(page.getTextLabel('#emailinputer1')).toBeDefined();
+    expect(page.enterInputText('#emailinput','asdf')).toBeDefined();
   });
 
-  it('error on input pass', () => {
+  it('input pass', () => {
     page.navigateTo();
-    page.enterInputText('app-root #pass-input','asdf');
-    expect(page.getTextLabel('app-root #pass-input-er1')).toBeDefined();
+    page.enterInputText('#passinput','asdf');
+    //expect(page.getTextLabel('#passinputer1')).toBeDefined();
+    expect(page.enterInputText('#passinput','asdf')).toBeDefined();
+
   });
 
   it('Click button', () => {
     page.navigateTo();
-    expect(page.clickButton('app-root #signin-button')).toBeDefined();
+    expect(page.clickButton('#signinbutton')).toBeDefined();
   });
 });
