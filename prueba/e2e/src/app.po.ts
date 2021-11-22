@@ -6,7 +6,7 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.deepCss('app-root ion-content')).getText();
+    return element(by.css('app-root ion-content')).getText();
   }
 
   enterInputText(sel:string, text:string){
@@ -18,7 +18,7 @@ export class AppPage {
   }
 
   clickButton(sel:string){
-    const el = element(by.css('sel'));
+    const el = element(by.css(sel));
     browser.wait(ExpectedConditions.elementToBeClickable(el));
     return el.click() as Promise<void>;
   }
